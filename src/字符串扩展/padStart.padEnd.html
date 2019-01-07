@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = 'hello';
+        //padStart padEnd  用指定的字符串补全字符串到指定长度 
+        //参数：
+        //1. 数字  将字符串补全到多长
+        //2.字符串  用什么字符串去补全
+        //返回值   补全后的新的字符串
+        let str1 = str.padStart(11, 'world ');
+        console.log(str1);//world hello
+
+        let str2=str.padEnd(11, ' world');
+        console.log(str2);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        var arr = ["hello", "world"];
+        //模板字符串   用反引号包裹  esc键下方的那个  ``
+        //特点：
+        //它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
+        //用${}嵌入变量
+        //${}中也可以做变量计算，和函数执行，也就是可以运行js代码
+        document.querySelector('#app').innerHTML = `
+            <ul>
+                <li>${arr[0]}</li>    
+                <li>${arr[1]}</li>    
+            </ul>
+        `;
+    </script>
+</body>
+
+</html>

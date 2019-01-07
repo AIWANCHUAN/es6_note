@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = 'hello world';
+        //startWith  返回值 布尔值   表示字符串是否以 "指定字符串" 作为开头
+        //参数  ： 
+        //第一个参数为   字符串  作为字符串的起始验证
+        //第二个参数为  数字     从字符串的第几位开始验证
+        console.log(str.startsWith('hello'));//true
+        console.log(str.startsWith('hello', 5));//false
+        console.log(str.startsWith('world', 5));//true
+
+        //endWith  返回值 布尔值   表示字符串是否以 "指定字符串" 作为开头
+        //参数  ： 
+        //第一个参数为   字符串  作为字符串的起始验证
+        //第二个参数为  数字     只验证字符串的前多少位
+        console.log(str.endsWith('world'));//true
+        console.log(str.endsWith('hello', 5));//true
+        console.log(str.endsWith('world', 5));//false
+
+        //includes 返回布尔值，表示是否找到了参数字符串
+        //参数：
+        // 第一个参数为  字符串  验证是否包含该字符串
+        // 第二个参数为 数字  从字符串的第几位开始验证
+        console.log(str.includes('ll'));//true
+        console.log(str.includes('hello', 5));//false
+
+    </script>
+</body>
+
+</html>
