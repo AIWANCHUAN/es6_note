@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //es5 我们如果要取到 年月日分组匹配我们用的是exec方法
+        //组匹配的一个问题是，每一组的匹配含义不容易看出来，而且只能用数字序号（比如matchObj[1]）引用，要是组的顺序变了，引用的时候就必须修改序号。
+        let str = "1993-03-04";
+        let reg = /(\d{4})-(\d{2})-(\d{2})/;
+        let matchObj = reg.exec(str);
+        console.log(matchObj);//["1993-03-04", "1993", "03", "04", index: 0, input: "1993-03-04", groups:undefined]
+        const year_es5 = matchObj[1];
+        const month_es5 = matchObj[2];
+        const day_es5 = matchObj[3];
+
+        //es6 我们可以利用正则表达式的 “具名匹配” 特性来获取年月日
+        //ES2018 引入了具名组匹配，允许为每一个组匹配指定一个名字，既便于阅读代码，又便于引用。
+        /*用法： 
+                具名匹配是用在圆括号内部的（也就是分组内部）
+                写法为 问号+尖括号+组名+尖括号  (?<groupName>)
+                然后就可以在exec方法返回结果的groups属性上引用该组名。同时，数字序号（matchObj[1]）依然有效。
+        */
+        //优点：如果分组的顺序变了 引用的时候什么都不用改，因为引用的不是序号是组名
+        let str1 = "1993-03-04";
+        let reg1 = /(?<year>\d{4}-(?<month>\d{2})-(?<day>\d{2}))/;
+        let matchObj1 = reg1.exec(str1);
+    </script>
+</body>
+
+</html>
