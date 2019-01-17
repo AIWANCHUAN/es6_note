@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的includes方法类似。
+        [1, 2, 3].includes(2)     // true
+        [1, 2, 3].includes(4)     // false
+        [1, 2, NaN].includes(NaN) // true
+        //和indexOf类似，但是相比于indexOf判断一个元素是否存在于数组中，indcludes有两个优点：
+            //1.更加语义化，直接返回布尔值
+            //2.内部判断算法不一样，indexOf会出现对NaN的误判，includes不会
+
+        //另外，Map 和 Set 数据结构有一个has方法，需要注意与includes区分。
+        //Map 结构的has方法，是用来查找键名的，比如Map.prototype.has(key)、
+        //Set 结构的has方法，是用来查找值的，比如Set.prototype.has(value)、
+    </script>
+</body>
+
+</html>

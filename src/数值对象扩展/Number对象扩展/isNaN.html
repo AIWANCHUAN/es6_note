@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //es6 在Number对象上提供了 ISNaN 方法
+        //Number.isNaN()用来检查一个值是否为NaN
+        //如果参数类型不是NaN，Number.isNaN一律返回false。
+        let NaNType = Number.isNaN(NaN);
+        let num = Number.isNaN(123);
+        console.log('NaN: ' + NaNType);
+        console.log('Number: ' + num);
+
+        //es6 在Number对象上提供了 isFinity 方法
+        //Number.isFinity()有限的
+        //如果参数类型不是数值，Number.isFinite一律返回false。
+        let finityNum = Number.isFinite(123);
+        let infinityNum = Number.isFinite(Infinity);
+        console.log('finity: ' + finityNum);
+        console.log('infinity: ' + infinityNum); 
+    </script>
+</body>
+
+</html>

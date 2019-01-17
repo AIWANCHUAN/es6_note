@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Array.of 方法可以将一组数据转换为数组返回
+        //这个方法的主要目的，是弥补数组构造函数Array()的不足。因为参数个数的不同，会导致Array()的行为有差异。
+        //Array()方法当只有一个参数时返回的是数组长度，而Array.of返回的是数组
+        let arr = Array.of(1, 2, 3);//[1,2,3]
+        //没有参数返回一个空数组
+        let arr1 = Array.of();//[]
+        //这个方法可以用slice方法代替
+        function returnArray() {
+            return Array.prototype.slice.call(arguments);
+        }
+    </script>
+</body>
+
+</html>

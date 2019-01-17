@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //es6引入了 极小常量 Number.EPSILON 
+        //js的计算  当浮点数计算时是不精确的    0.1+0.2 其实是 0.30000000000000004
+        //利用EPSILON 可以构造一个判断误差范围的函数,该函数判断表达式与值是否相等
+        function withinErrorMargin(left, right) {
+            return Math.abs(left - right) < Number.EPSILON * Math.pow(2, 2);
+        }
+
+        //0.1 + 0.2 === 0.3 // false
+        withinErrorMargin(0.1 + 0.2, 0.3) // true
+
+        //1.1 + 1.3 === 2.4 // false
+        withinErrorMargin(1.1 + 1.3, 2.4) // true
+    </script>
+</body>
+
+</html>

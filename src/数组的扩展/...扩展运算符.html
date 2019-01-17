@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //...[] 扩展运算符和 ...rest参数正好相反----- ...rest参数是将参数合并成一个数组，而扩展运算符是展开数组
+        //该运算符主要用于函数调用。
+        //注意，扩展运算符如果放在括号中，JavaScript 引擎就会认为这是函数调用。如果这时不是函数调用，就会报错。
+        console.log(...[1, 2, 3]);//1  2  3
+        function arrPush(array, ...rest) {
+            //这里注意区分：参数内的...rest是rest参数表示收集余下实参，函数内的...rest表示的是用扩展运算符（...）来
+            //展开rest参数数组，这样可以省去for循环
+            array.push(...rest);
+        }
+
+        //扩展运算符后面还可以放置表达式。
+        //es6 对象 数组 函数参数 末尾都可以保留逗号
+        let x = 1;
+        const arr = [
+            ...(x > 0 ? ["hello", "world"] : ["nice", "world"]),
+            "I am coming",
+        ]
+
+        //扩展运算符的出现可以替代apply方法
+        //es5 数组求最大值
+        Math.max.apply(null, [1, 2, 3])
+        //es6 利用扩展运算符求最大值
+        Math.max(...[1, 2, 3]);
+        //等同于
+        console.log(Math.max(1, 2, 3));
+
+
+        //扩展运算符可以将字符串转为真正的数组
+        let strArr = [...'hello'];// ['h','e','l','l','o']
+
+        //利用扩展运算符可以返回字符串真正的长度，四个字节的Unicode编码的字符串再返回长度时可能会不准，扩展运算符可以解决
+        function strLength(str) {
+            return [...str].length;
+        }
+
+        //扩展运算符可以将Interator对象（遍历器）转为真正的数组
+        let nodeList = document.querySelectorAll('div');
+        let nodeArr = [...nodeList];
+    </script>
+</body>
+
+</html>

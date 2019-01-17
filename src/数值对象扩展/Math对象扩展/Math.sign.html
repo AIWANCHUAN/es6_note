@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //es6 为Math对象提供了sign方法，该方法可以判断参数的正负值或者为0
+        //该方法先对参数进行Number（）方法处理将可转的转为数值类型，不能转返回NaN
+        //正数返回1 负数返回-1 0返回0 -0返回-0  其他返回NaN
+        let a = Math.sign(11);  //1  
+        let b = Math.sign(-11);//-1    
+        let c = Math.sign(0); //0   
+        let d = Math.sign(-0);//-0    
+        let e = Math.sign('123');//1
+        let f = Math.sign('aa');//NaN
+    </script>
+</body>
+
+</html>

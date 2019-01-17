@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // es6提供了 Math.trunc方法  该方法作用是将数值的小数切掉变为整数，不存在四舍五入
+        // 该方法和 Number.ParseInt() 作用类似 
+        //区别是parseInt对于非数值类型返回的是NaN
+        //而trunc方法是在内部先调用了Number方法将参数进行转化，然后切掉小数，对于无法转化的也返回NaN
+
+        let numA = parseInt(Number('3.14'));//3
+
+        let numB = Math.trunc('3.14');//3
+    </script>
+</body>
+
+</html>

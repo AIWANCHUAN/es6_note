@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //在es5 中函数就有name属性了，不过在es6中才将name属性写入标准
+        //es5 中匿名函数赋值给一个变量name属性返回的是空字符串，es6中返回变量名。
+        function foo() {
+
+        }
+        foo.name;//foo
+
+
+        let baz = function () {
+
+        }
+        baz.name;//baz
+    </script>
+</body>
+
+</html>

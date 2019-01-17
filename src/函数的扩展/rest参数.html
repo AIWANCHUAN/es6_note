@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // es6 引入了 rest参数（...变量名）,用于获取多余的参数，可以替代arguments对象。
+        //rest 参数是一个数组。未声明的形参在调用函数时传入多余的实参会存入rest参数数组内.
+        //rest 参数都是定义在参数的末尾位置，并且之后不能再有参数，否则会报错
+        //函数的length属性不包括rest参数。
+        function add(...nums) {
+            let res = 0;
+            for (let num of nums) {
+                res += num;
+            }
+            return res;
+        }
+        document.write(add(1, 2, 3));
+    </script>
+</body>
+
+</html>

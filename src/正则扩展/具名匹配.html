@@ -29,8 +29,12 @@
         */
         //优点：如果分组的顺序变了 引用的时候什么都不用改，因为引用的不是序号是组名
         let str1 = "1993-03-04";
-        let reg1 = /(?<year>\d{4}-(?<month>\d{2})-(?<day>\d{2}))/;
+        let reg1 = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/;
         let matchObj1 = reg1.exec(str1);
+        let year_es6 = matchObj1.groups.year;
+        let month_es6 = matchObj1.groups.month;
+        let day_es6 = matchObj1.groups.day;
+        console.log(year_es6 + month_es6 + day_es6);
     </script>
 </body>
 

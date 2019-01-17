@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //es5中  我们使用字面量的形式创建变量，在创建时无法使用表达式作为属性名
+        let obj = {
+
+        };
+        //我们像对象添加属性可以使用两种方式
+        //方式一：
+        obj.foo = 'foo';
+        //方式二：如果要使用表达式作为属性名可以利用中括号的方法添加属性名
+        obj['a' + 'bc'] = 'abc';
+
+        //es6中  我们可以在创建字面量对象的时候就直接使用[表达式]作为属性名
+        let obj1 = {
+            foo: 'foo',
+            ['a' + 'bc']: 'abc',
+        }
+        //注意：
+        //这种规则也适用于
+    </script>
+</body>
+
+</html>

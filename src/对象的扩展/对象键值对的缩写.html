@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //es6中  属性名的 “字符串” 和 属性值的变量名相同时  可以简写
+        let foo = 'xixixi';
+        let obj = {
+            foo
+        }
+        //相当于
+        //let  obj={ foo:foo } 或者------ let obj={foo:'xixixi'}
+
+        //当然如果属性值不是变量，而是字符串的时候，即使键值对的字符串相同也不能简写
+        //例如： let obj={ foo:'foo'} 不能简写
+
+        //还有就是在es6中， 对象的属性值如果是一个匿名函数的话，可以简写
+        let obj1 = {
+            bar() {
+
+            }
+        }
+        //相当于
+        // let obj1={
+        //     bar:function(){
+
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
